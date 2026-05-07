@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import api from '../api/axios';
 import toast from 'react-hot-toast';
 import { Plus, Users, BookOpen, Hash, Sparkles, GraduationCap, X } from 'lucide-react';
+import GroqChat from '../components/GroqChat';
 
 const GRADIENTS = [
   'from-emerald-500 to-teal-600',
@@ -231,6 +232,7 @@ export default function Dashboard() {
           </form>
         </Modal>
       )}
+      <GroqChat role={user.role} />
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import api from '../api/axios';
 import toast from 'react-hot-toast';
 import { ArrowLeft, Plus, ExternalLink, Trash2, Users, Hash, BookOpen, ClipboardList, Calendar, X, ChevronDown } from 'lucide-react';
+import GroqChat from '../components/GroqChat';
 
 function PostCard({ post, isTeacher, onDelete, index }) {
   const isAssignment = post.type === 'assignment';
@@ -253,6 +254,7 @@ export default function ClassPage() {
           </div>
         </div>
       )}
+      <GroqChat role={user.role} />
     </div>
   );
 }
